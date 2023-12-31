@@ -2,18 +2,20 @@
 
 > Use a spare Android device to provide an offline speech recognition interface.
 
-## Physical Dependencies
+## Dependencies
+
+### Physical
 1. A Google Android device ("phone").
 2. A machine on your local network to which the phone may be connected by USB ("server").
 
-## Digital Dependencies
+### Digital
 Older versions of any of the following may work, but have not been tested.
 
-### Phone
+#### Phone
 1. Termux >= 0.118.0.
 2. Node.JS >= 17.7.2.
 3. NPM >= 8.5.2.
-### Computer
+#### Computer
 1. GNU Bash >= 5.1.4.
 2. `adb` >= 1.0.41.
 3. Node.JS >= 18.12.1. *Versions older than 4.0.0 will **definitely** not work.*
