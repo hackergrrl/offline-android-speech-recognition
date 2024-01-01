@@ -2,6 +2,11 @@
 
 > Use a spare Android device to provide an offline speech recognition interface.
 
+## Status
+*Proof of Concept.* Right now this works great for my own personal use, but, in order to be more broadly useful, it requires testing on a broader range of Android devices.
+
+Please open a Pull Request with the results of your own tests, or, better, patches that add support for additional devices.
+
 ## Dependencies
 
 ### Physical
@@ -68,12 +73,6 @@ The control server exposes API access via a TCP server on port 9003. It accepts 
 |Device|Android Version|Works|Notes|
 |---|---|---|---|
 |Google Pixel 1|10|✅||
-
-## Contributions
-I would like to hear back from people about what devices and versions of Android do and do not work with this software, so that I might build out a more accurate compatibility table. Please open a Pull Request with the results of your own tests, or, better, any patches that add support for additional devices.
-
-## Disclaimer
-This was tested with a single device. There is a good chance it will not work as-is with other devices. The speech virtual keyboard interface may look or work differently, and devices with different pixel densities may result in the simulated tap coordinates in `control.js` not lining up.
 
 ## License
 Copyright (c) 2023 Kira Oakley
