@@ -63,7 +63,7 @@ Any machine on the network may then issue a request to the control server over T
 6. Test the interface by running a command on your own computer like `netcat 192.168.1.103 9003`, to connect to the control server. Type `listen` and press enter. The phone's background will change from blue to green, indicating it is listening for voice input. The transcribed result (or an error) is written back.
 
 ## API
-The control server exposes API access via a TCP server on port 9003. It accepts one command, terminated by a newline: `listen`. This cues the phone to listen for speech in the room or area. After the speech ends, the API will write back the text transcript in lower case. If there is an error, the text returned will be `ERROR: <text>`.
+The control server exposes API access via a TCP server on port 9003. It accepts one command, terminated by a newline: `listen`. This cues the phone to listen for speech in the room or area. After the speech ends, the API will write back the text transcript in lower case. If no speech is heard before the recognition times out (~5 seconds), the text `nevermind` is returned. If there is an error, the text returned will be `ERROR: <text>`.
 
 ## Device Compatibility
 |Device|Android Version|Works|Notes|
