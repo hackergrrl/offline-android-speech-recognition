@@ -27,9 +27,9 @@ Older versions of any of the following may work, but have not been tested.
 
 ## Overview
 ### Background
-My Google Pixel 1 phone comes with a feature on its default virtual keyboard for performing text transcription using speech recognition.
+I'd like to have general purpose speech recognition software of decent quality. I like Google's speech recognition software, but don't want my voice leaked to their servers (or anywhere on the internet). I'd also like to not have to pay any money for this.
 
-When an internet connection is detected, the phone will prefer to send my voice to Google's servers for text transcription. However, when the phone is offline, its built-in software is used for entirely local, offline speech recognition and text transcription. It would be very useful to have some means of accessing this for my own purposes.
+My Google Pixel 1 phone comes with a feature on its default virtual keyboard for performing text transcription using speech recognition. When an internet connection is detected, the phone will prefer to send my voice to Google's servers for text transcription. However, when the phone is offline, its built-in software is used for entirely local, offline speech recognition and text transcription. It would be very useful to have some means of accessing this for my own purposes. This would let me give an old device a new use, too!
 
 ### Problems
 None of this functionality is exposed for programmatic control. The problems are these:
@@ -73,6 +73,9 @@ The control server exposes API access via a TCP server on port 9003. It accepts 
 |Device|Android Version|Works|Notes|
 |---|---|---|---|
 |Google Pixel 1|10|✅||
+
+## Notes
+This has been working very well for me. I use the programmatic interface for voice dictation on my laptop (piped into `xdotool type` for input simulation), as well as for command recognition for various home automation tasks, such as timers and media playback control. I combined this with [vosk](https://alphacephei.com/vosk/), which has offline continuous speech recognition of lesser quality, having vosk do wake-word detection (e.g. "computer!") and then activating the Android phone for command recognition.
 
 ## License
 Copyright (c) 2023 Kira Oakley
