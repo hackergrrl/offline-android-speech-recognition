@@ -45,14 +45,13 @@ Any machine on the network may then issue a request to the control server over T
 1. Install Termux. This is freely available without using the Google Play store, on [F-Droid][f-droid].
 2. Install Node.JS using the command `pkg install nodejs`, run within a Termux terminal.
 3. Clone this repository using Termux: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
-4. Run the web server using Termux: `cd offline-android-speech-recognition; npm install; node server.js`
-5. Open a web browser and navigate it to `http://localhost:9001`. *The background will turn blue to indicate a positive connection to the web server. Red indicates something is amiss.*
-6. Tap on the text field to focus it and bring up the virtual keyboard.
-7. Tap on the little microphone icon, ![microphone icon](mic-icon.png).
-8. This will change the keyboard to a UI component with a large microphone icon:
-![microphone keyboard](mic-keyboard.png).
-
-7. The phone setup is now complete.
+4. Put the phone into Airplane Mode or otherwise disable Wi-Fi.
+5. Run the web server using Termux: `cd offline-android-speech-recognition; npm install; node server.js`
+6. Open a web browser and navigate it to `http://localhost:9001`. *The background will turn blue to indicate a positive connection to the web server. Red indicates something is amiss.*
+7. Tap on the text field to focus it and bring up the virtual keyboard.
+8. Tap on the little microphone icon, ![microphone icon](mic-icon.png).
+9. This will change the keyboard to a UI component with a large microphone icon: ![microphone keyboard](mic-keyboard.png).
+10. The phone setup is now complete.
 
 ### Computer
 1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your machine's `$PATH`.
