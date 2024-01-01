@@ -1,0 +1,67 @@
+<h1>text capture page</h1>
+
+<textarea id="capture" rows="2" cols="20" style="background: black">
+</textarea>
+
+<script>
+  let lastEvent = 0
+  let inputEvents = 0
+  const t = document.getElementById('capture')
+  let socket
+  let iv
+
+  function write (data) {
+    socket.send(JSON.stringify(data))
+  }
+
+  function connect () {
+    document.body.style['background-color'] = 'black'
+    setTimeout(() => {
+      if (iv) clearTimeout(iv)
+      socket = new WebSocket('ws://localhost:9002')
+      socket.onopen = (event) => {
+        document.body.style['background-color'] = 'blue'
+        // XXX: for coloured state mgmt
+        socket.send(JSON.stringify({ type: 'mode', mode: 'web' }))
+      }
+      socket.onclose = (event) => {
+        document.body.style['background-color'] = 'red'
+        if (iv) clearTimeout(iv)
+        iv = setTimeout(connect, 5000)
+      }
+      socket.onerror = (event) => {
+        document.body.style['background-color'] = 'red'
+        if (iv) clearTimeout(iv)
+        iv = setTimeout(connect, 5000)
+      }
+      socket.onmessage = (event) => {
+        try {
+          const msg = JSON.parse(event.data.toString())
+          if (msg.type === 'state-ctl') {
+            if (msg.state === 'OFF') document.body.style['background-color'] = 'blue'
+            else document.body.style['background-color'] = 'green'
+          }
+        } catch (e) {}
+      }
+    }, 1000)
+  }
+
+  t.addEventListener('input', (ev) => {
+    if (typeof ev.data !== 'string') return
+    inputEvents++
+    lastEvent = Date.now()
+    write({ type: 'oninput' })
+  })
+
+  setInterval(() => {
+    if (Date.now() - lastEvent > 1200 && inputEvents > 0) {
+      const pending = t.value
+      write({ type: 'result', text: pending })
+      inputEvents = 0
+      t.value = ''
+    }
+  }, 500)
+
+  t.value = ''
+  connect()
+</script>
