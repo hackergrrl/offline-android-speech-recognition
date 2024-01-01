@@ -3,7 +3,7 @@
 > Use a spare Android device to provide an offline speech recognition interface.
 
 ## Status
-*Proof of Concept.* Right now this works great for my own personal use, but, in order to be more broadly useful, it requires testing on a broader range of Android devices.
+*Proof of Concept.* Right now this software works great for my own personal use, but in order to be more broadly useful it requires testing on a broader range of Android devices.
 
 Please open a Pull Request with the results of your own tests, or, better, patches that add support for additional devices.
 
