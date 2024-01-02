@@ -62,9 +62,10 @@ Any machine on the network may then issue a request to the control server over T
 1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your machine's `$PATH`.
 2. Install [Node.JS](https://nodejs.org/en). *Versions older than 4.0.0 will **definitely** not work.*
 3. Clone this repository: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
-4. Plug in the phone to the computer using a USB cable.
-5. Run `node control.js`, which will connect to the phone's WebSocket server.
-6. Test the interface by running a command on your own computer like `netcat 192.168.1.103 9003`, to connect to the control server. Type `listen` and press enter. The phone's background will change from blue to green, indicating it is listening for voice input. The transcribed result (or an error) is written back.
+4. Install dependencies: `cd offline-android-speech-recognition ; npm install`
+5. Plug in the phone to the computer using a USB cable.
+6. Run `node control.js`, which will connect to the phone's WebSocket server.
+7. Test the interface by running a command on your own computer like `netcat 192.168.1.103 9003`, to connect to the control server. Type `listen` and press enter. The phone's background will change from blue to green, indicating it is listening for voice input. The transcribed result (or an error) is written back.
 
 ## API
 The control server exposes API access via a TCP server on port 9003. It accepts one command, terminated by a newline: `listen`. This cues the phone to listen for speech in the room or area. After the speech ends, the API will write back the text transcript in lower case. If no speech is heard before the recognition times out (~5 seconds), the text `nevermind` is returned. If there is an error, the text returned will be `ERROR: <text>`.
