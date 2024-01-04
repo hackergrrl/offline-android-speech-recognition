@@ -17,9 +17,9 @@ Please [open a Pull Request][new-pr] with the results of your own tests, or, bet
 Older versions of any of the following may work, but have not been tested.
 
 #### Phone
-1. Termux >= 0.118.0.
-2. Node.js >= 17.7.2.
-3. npm package manager >= 8.5.2.
+1. [Termux][termux] >= 0.118.0.
+2. [Node.js][node.js] >= 17.7.2 (via [Termux package management][termux-pkg]).
+3. [npm package manager][npm] >= 8.5.2 (included with Node.js).
 #### Computer
 1. GNU Bash >= 5.1.4.
 2. Android Debug Bridge (`adb`) >= 1.0.41.
@@ -85,3 +85,7 @@ This has been working very well for me. I use the programmatic interface for voi
 
 [f-droid]: https://f-droid.org
 [new-pr]: https://github.com/hackergrrl/offline-android-speech-recognition/pulls
+[termux]: https://termux.dev/en/
+[node.js]: https://nodejs.org/en
+[npm]: https://docs.npmjs.com/cli/v10/commands/npm
+[termux-pkg]: https://wiki.termux.com/wiki/Package_Management
