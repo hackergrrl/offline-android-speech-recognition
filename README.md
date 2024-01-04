@@ -22,7 +22,7 @@ Older versions of any of the following may work, but have not been tested.
 3. npm package manager >= 8.5.2.
 #### Computer
 1. GNU Bash >= 5.1.4.
-2. `adb` >= 1.0.41.
+2. Android Debug Bridge (`adb`) >= 1.0.41.
 3. Node.js >= 18.12.1. *Versions older than 4.0.0 will **definitely** not work.*
 
 ## Overview
