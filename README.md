@@ -43,7 +43,7 @@ The first problem is solved by simulating the required user input, by connecting
 
 The second problem requires capturing the text written by the speech recognition virtual keyboard. This is done by giving focus to a `textarea` HTML element, for the keyboard to write into, and whose text input can be detected by its `input` Javascript event. This HTML element is part of a **text capture web page** which is served by a Node.js **web server** running on the Android phone itself, using the free software Termux. This local web server also runs a **WebSocket server**. The computer can then run a small **control server** that connects to the WebSocket server, and both receive the text transcriptions captured, and instruct the phone to listen for voice input.
 
-Any computer on the network may then issue a request to the control server over TCP, which will trigger the necessary simulated screen taps to make the phone's start listening for speech, and then transmit back to the control server the text transcription captured, which is then passed on to the requester.
+Any computer on the network may then issue a request to the control server over TCP, which will trigger the necessary simulated screen taps to make the phone start listening for speech, and then transmit back to the control server the text transcription captured, which is then passed on to the requester.
 
 ## Installation
 ### Phone
