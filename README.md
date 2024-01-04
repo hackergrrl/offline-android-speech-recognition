@@ -19,7 +19,7 @@ Older versions of any of the following may work, but have not been tested.
 #### Phone
 1. Termux >= 0.118.0.
 2. Node.js >= 17.7.2.
-3. NPM >= 8.5.2.
+3. npm package manager >= 8.5.2.
 #### Computer
 1. GNU Bash >= 5.1.4.
 2. `adb` >= 1.0.41.
@@ -61,7 +61,7 @@ Any computer on the network may then issue a request to the control server over 
 ### Computer
 1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your shell's `$PATH`.
 2. Install [Node.js](https://nodejs.org/en). *Versions older than 4.0.0 will **definitely** not work.*
-3. Install [NPM](https://npmjs.org).
+3. Install [npm](https://npmjs.org).
 4. Clone this repository: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
 5. Install dependencies: `cd offline-android-speech-recognition ; npm install`
 6. Plug in the phone to the computer using a USB cable.
