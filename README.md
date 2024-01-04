@@ -5,7 +5,7 @@
 ## Status
 *Proof of Concept.* Right now this software works great for my own personal use, but in order to be more broadly useful it requires testing on a wider range of Android devices.
 
-Please open a Pull Request with the results of your own tests, or, better, patches that add support for additional devices.
+Please [open a Pull Request][new-pr] with the results of your own tests, or, better, patches that add support for additional devices.
 
 ## Dependencies
 
@@ -84,3 +84,4 @@ This has been working very well for me. I use the programmatic interface for voi
 [Copyright (c) 2023 Kira Oakley](LICENSE)
 
 [f-droid]: https://f-droid.org
+[new-pr]: https://github.com/hackergrrl/offline-android-speech-recognition/pulls
