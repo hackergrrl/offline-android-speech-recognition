@@ -60,7 +60,7 @@ Any computer on the network may then issue a request to the control server over 
     git clone https://github.com/hackergrrl/offline-android-speech-recognition
     ```
 
-4. Put the phone into Airplane Mode or otherwise disable Wi-Fi.
+4. Put the phone into Airplane Mode or otherwise disable Internet access.
 5. Run the web server using Termux:
 
     ```shell
