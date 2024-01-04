@@ -3,13 +3,7 @@
   "description": "Uses an offline android phone's google speech recognition for our own purposes.",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "tape test/*.js"
-  },
   "dependencies": {
     "ws": "^8.14.2"
   },
-  "devDependencies": {
-    "tap": "^5.1.1"
-  }
 }
