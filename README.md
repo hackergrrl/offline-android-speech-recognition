@@ -69,7 +69,7 @@ Any computer on the network may then issue a request to the control server over 
     node server.js
     ```
 
-6. Open a web browser and navigate it to `http://localhost:9001`. *The background will turn blue to indicate a positive connection to the web server. Red indicates something is amiss.*
+6. Open a web browser and navigate it to <http://localhost:9001>. *The background will turn blue to indicate a positive connection to the web server. Red indicates something is amiss.*
 7. Tap on the text field to focus it and bring up the virtual keyboard.
 8. Tap on the little microphone icon, ![microphone icon](mic-icon.png).
 9. This will change the keyboard to a UI component with a large microphone icon:
