@@ -47,7 +47,7 @@ Any computer on the network may then issue a request to the control server over 
 
 ## Installation
 ### Phone
-1. Install Termux. This is freely available without using the Google Play store, on [F-Droid][f-droid].
+1. Install [Termux via the F-Droid app repository][f-droid] (not available on the Google Play Store).
 2. Install Node.js using the command `pkg install nodejs`, run within a Termux terminal.
 3. Clone this repository using Termux: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
 4. Put the phone into Airplane Mode or otherwise disable Wi-Fi.
@@ -83,7 +83,7 @@ This has been working very well for me. I use the programmatic interface for voi
 
 [Copyright (c) 2023 Kira Oakley](LICENSE)
 
-[f-droid]: https://f-droid.org
+[f-droid]: https://f-droid.org/en/packages/com.termux/
 [new-pr]: https://github.com/hackergrrl/offline-android-speech-recognition/pulls
 [termux]: https://termux.dev/en/
 [node.js]: https://nodejs.org/en
