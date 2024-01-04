@@ -11,7 +11,7 @@ Please open a Pull Request with the results of your own tests, or, better, patch
 
 ### Physical
 1. A Google Android device ("phone").
-2. A machine on your local network to which the phone may be connected by USB ("server").
+2. A computer on your local network to which the phone may be connected by USB ("server").
 
 ### Digital
 Older versions of any of the following may work, but have not been tested.
@@ -43,7 +43,7 @@ The first problem is solved by simulating the required user input, by connecting
 
 The second problem requires capturing the text written by the speech recognition virtual keyboard. This is done by giving focus to a `textarea` HTML `input` element, for the keyboard to write into, and whose text input can be detected by its `oninput` Javascript event. This HTML element is part of a **text capture web page** which is served by a Node.JS **web server** running on the Android phone itself, using the free software Termux. This local web server also runs a **WebSocket server**. The computer can then run a small **control server** that connects to the WebSocket server, and both receive the text transcriptions captured, and instruct the phone to listen for voice input.
 
-Any machine on the network may then issue a request to the control server over TCP, which will trigger the necessary simulated screen taps to make the phone's start listening for speech, and then transmit back to the control server the text transcription captured, which is then passed on to the requester.
+Any computer on the network may then issue a request to the control server over TCP, which will trigger the necessary simulated screen taps to make the phone's start listening for speech, and then transmit back to the control server the text transcription captured, which is then passed on to the requester.
 
 ## Installation
 ### Phone
@@ -59,7 +59,7 @@ Any machine on the network may then issue a request to the control server over T
 10. The phone setup is now complete.
 
 ### Computer
-1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your machine's `$PATH`.
+1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your shell's `$PATH`.
 2. Install [Node.JS](https://nodejs.org/en). *Versions older than 4.0.0 will **definitely** not work.*
 3. Install [NPM](https://npmjs.org).
 4. Clone this repository: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
