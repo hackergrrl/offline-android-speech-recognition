@@ -21,9 +21,9 @@ Older versions of any of the following may work, but have not been tested.
 2. [Node.js][node.js] >= 17.7.2 (via [Termux package management][termux-pkg]).
 3. [npm package manager][npm] >= 8.5.2 (included with Node.js).
 #### Computer
-1. GNU Bash >= 5.1.4.
-2. Android Debug Bridge (`adb`) >= 1.0.41.
-3. Node.js >= 18.12.1. *Versions older than 4.0.0 will **definitely** not work.*
+1. [GNU Bash][bash] >= 5.1.4.
+2. [Android Debug Bridge (`adb`)][adb] >= 1.0.41.
+3. [Node.js][node.js] >= 18.12.1. *Versions older than 4.0.0 will **definitely** not work.*
 
 ## Overview
 ### Background
@@ -89,3 +89,5 @@ This has been working very well for me. I use the programmatic interface for voi
 [node.js]: https://nodejs.org/en
 [npm]: https://docs.npmjs.com/cli/v10/commands/npm
 [termux-pkg]: https://wiki.termux.com/wiki/Package_Management
+[bash]: https://www.gnu.org/software/bash/
+[adb]: https://developer.android.com/tools/adb
