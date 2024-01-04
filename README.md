@@ -18,12 +18,12 @@ Older versions of any of the following may work, but have not been tested.
 
 #### Phone
 1. Termux >= 0.118.0.
-2. Node.JS >= 17.7.2.
+2. Node.js >= 17.7.2.
 3. NPM >= 8.5.2.
 #### Computer
 1. GNU Bash >= 5.1.4.
 2. `adb` >= 1.0.41.
-3. Node.JS >= 18.12.1. *Versions older than 4.0.0 will **definitely** not work.*
+3. Node.js >= 18.12.1. *Versions older than 4.0.0 will **definitely** not work.*
 
 ## Overview
 ### Background
@@ -41,14 +41,14 @@ None of this functionality is exposed for programmatic control. The problems are
 ### Solution
 The first problem is solved by simulating the required user input, by connecting the phone to a **computer** and using `adb`, which has a sub-command for simulating a tap event at a particular X/Y coordinate: `adb shell input tap X Y`.
 
-The second problem requires capturing the text written by the speech recognition virtual keyboard. This is done by giving focus to a `textarea` HTML `input` element, for the keyboard to write into, and whose text input can be detected by its `oninput` Javascript event. This HTML element is part of a **text capture web page** which is served by a Node.JS **web server** running on the Android phone itself, using the free software Termux. This local web server also runs a **WebSocket server**. The computer can then run a small **control server** that connects to the WebSocket server, and both receive the text transcriptions captured, and instruct the phone to listen for voice input.
+The second problem requires capturing the text written by the speech recognition virtual keyboard. This is done by giving focus to a `textarea` HTML `input` element, for the keyboard to write into, and whose text input can be detected by its `oninput` Javascript event. This HTML element is part of a **text capture web page** which is served by a Node.js **web server** running on the Android phone itself, using the free software Termux. This local web server also runs a **WebSocket server**. The computer can then run a small **control server** that connects to the WebSocket server, and both receive the text transcriptions captured, and instruct the phone to listen for voice input.
 
 Any computer on the network may then issue a request to the control server over TCP, which will trigger the necessary simulated screen taps to make the phone's start listening for speech, and then transmit back to the control server the text transcription captured, which is then passed on to the requester.
 
 ## Installation
 ### Phone
 1. Install Termux. This is freely available without using the Google Play store, on [F-Droid][f-droid].
-2. Install Node.JS using the command `pkg install nodejs`, run within a Termux terminal.
+2. Install Node.js using the command `pkg install nodejs`, run within a Termux terminal.
 3. Clone this repository using Termux: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
 4. Put the phone into Airplane Mode or otherwise disable Wi-Fi.
 5. Run the web server using Termux: `cd offline-android-speech-recognition; npm install; node server.js`
@@ -60,7 +60,7 @@ Any computer on the network may then issue a request to the control server over 
 
 ### Computer
 1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your shell's `$PATH`.
-2. Install [Node.JS](https://nodejs.org/en). *Versions older than 4.0.0 will **definitely** not work.*
+2. Install [Node.js](https://nodejs.org/en). *Versions older than 4.0.0 will **definitely** not work.*
 3. Install [NPM](https://npmjs.org).
 4. Clone this repository: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
 5. Install dependencies: `cd offline-android-speech-recognition ; npm install`
