@@ -48,24 +48,60 @@ Any computer on the network may then issue a request to the control server over 
 ## Installation
 ### Phone
 1. Install [Termux via the F-Droid app repository][f-droid] (not available on the Google Play Store).
-2. Install Node.js using the command `pkg install nodejs`, run within a Termux terminal.
-3. Clone this repository using Termux: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
+2. Within a Termux terminal, install Node.js using the command:
+
+    ```shell
+    pkg install nodejs
+    ```
+
+3. Clone this repository using Termux:
+
+    ```shell
+    git clone https://github.com/hackergrrl/offline-android-speech-recognition
+    ```
+
 4. Put the phone into Airplane Mode or otherwise disable Wi-Fi.
-5. Run the web server using Termux: `cd offline-android-speech-recognition; npm install; node server.js`
+5. Run the web server using Termux:
+
+    ```shell
+    cd offline-android-speech-recognition
+    npm install
+    node server.js
+    ```
+
 6. Open a web browser and navigate it to `http://localhost:9001`. *The background will turn blue to indicate a positive connection to the web server. Red indicates something is amiss.*
 7. Tap on the text field to focus it and bring up the virtual keyboard.
 8. Tap on the little microphone icon, ![microphone icon](mic-icon.png).
-9. This will change the keyboard to a UI component with a large microphone icon: ![microphone keyboard](mic-keyboard.png).
+9. This will change the keyboard to a UI component with a large microphone icon:
+
+    ![microphone keyboard](mic-keyboard.png).
+
 10. The phone setup is now complete.
 
 ### Computer
 1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your shell's `$PATH`.
 2. Install [Node.js](https://nodejs.org/en). *Versions older than 4.0.0 will **definitely** not work.*
 3. Install [npm](https://npmjs.org).
-4. Clone this repository: `git clone https://github.com/hackergrrl/offline-android-speech-recognition`
-5. Install dependencies: `cd offline-android-speech-recognition ; npm install`
+4. Clone this repository:
+
+    ```shell
+    git clone https://github.com/hackergrrl/offline-android-speech-recognition
+    ```
+
+5. Install dependencies:
+
+    ```shell
+    cd offline-android-speech-recognition
+    npm install
+    ```
+
 6. Plug in the phone to the computer using a USB cable.
-7. Run `node control.js`, which will connect to the phone's WebSocket server.
+7. Start the control server, which will connect to the phone's WebSocket server:
+
+    ```
+    node control.js
+    ```
+
 8. Test the interface by running a command on your own computer like `netcat 192.168.1.103 9003`, to connect to the control server. Type `listen` and press enter. The phone's background will change from blue to green, indicating it is listening for voice input. The transcribed result (or an error) is written back.
 
 ## API
