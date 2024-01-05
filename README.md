@@ -5,7 +5,7 @@
 ## Status
 *Proof of Concept.* Right now this software works great for my own personal use, but in order to be more broadly useful it requires testing on a wider range of Android devices.
 
-Please [open a Pull Request][new-pr] with the results of your own tests, or, better, patches that add support for additional devices.
+Please open a Pull Request with the results of your own tests, or, better, patches that add support for additional devices.
 
 ## Dependencies
 
@@ -18,11 +18,11 @@ Older versions of any of the following may work, but have not been tested.
 
 #### Phone
 1. [Termux][termux] >= 0.118.0.
-2. [Node.js][node.js] >= 17.7.2 (via [Termux package management][termux-pkg]).
+2. [Node.js][node.js] >= 17.7.2 (via the [Termux package manager][termux-pkg]).
 3. [npm package manager][npm] >= 8.5.2 (included with Node.js).
 #### Computer
 1. [GNU Bash][bash] >= 5.1.4.
-2. [Android Debug Bridge (`adb`)][adb] >= 1.0.41.
+2. [Android Debug Bridge][adb] (`adb`) >= 1.0.41.
 3. [Node.js][node.js] >= 18.12.1. *Versions older than 4.0.0 will **definitely** not work.*
 
 ## Overview
@@ -47,7 +47,7 @@ Any computer on the network may then issue a request to the control server over 
 
 ## Installation
 ### Phone
-1. Install [Termux via the F-Droid app repository][f-droid] (not available on the Google Play Store).
+1. Install Termux via [F-Droid][f-droid] (not available on the Google Play Store).
 2. Within a Termux terminal, install Node.js using the command:
 
     ```shell
@@ -80,7 +80,7 @@ Any computer on the network may then issue a request to the control server over 
 
 ### Computer
 1. Install the `adb` command as part of the [Android Platform SDK Tools](https://developer.android.com/tools/releases/platform-tools), and ensure it is in your shell's `$PATH`.
-2. Install [Node.js](https://nodejs.org/en). *Versions older than 4.0.0 will **definitely** not work.*
+2. Install [Node.js](https://nodejs.org/en).
 3. Install [npm](https://npmjs.org).
 4. Clone this repository:
 
@@ -120,7 +120,6 @@ This has been working very well for me. I use the programmatic interface for voi
 [Copyright (c) 2023 Kira Oakley](LICENSE)
 
 [f-droid]: https://f-droid.org/en/packages/com.termux/
-[new-pr]: https://github.com/hackergrrl/offline-android-speech-recognition/pulls
 [termux]: https://termux.dev/en/
 [node.js]: https://nodejs.org/en
 [npm]: https://docs.npmjs.com/cli/v10/commands/npm
